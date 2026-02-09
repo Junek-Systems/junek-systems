@@ -756,15 +756,15 @@
 
 /* HERO FUNDO */
 .hero-novo {
-    position: relative;
-    min-height: 90vh;
+    min-height: 100vh;
+    width: 100%;
     background: radial-gradient(
-        circle at top,
-        rgba(0, 196, 106, 0.15),
-        #000 60%
+        ellipse at top,
+        rgba(0, 196, 106, 0.18),
+        #000 70%
     );
-    overflow: hidden;
 }
+
 
 /* GLOW SUTIL */
 .hero-overlay {
@@ -850,8 +850,14 @@
 }
 
 @media (max-width: 768px) {
+    .hero-novo {
+        min-height: 100vh;
+        padding: 0;
+    }
 
     .hero-conteudo {
+        height: auto;
+        min-height: 100vh;
         padding: 0 16px;
     }
 
@@ -1010,11 +1016,39 @@ nav .logo:hover img {
     opacity: 0.85;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between; /* mantém logo à esquerda e menu à direita */
-    align-items: center;
-    padding: 20px 40px;
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--azul);
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 40px 20px;
+        transition: right 0.3s ease;
+    }
+
+    .menu.ativo {
+        right: 0;
+    }
 }
 
 /* MENU */
@@ -1046,3 +1080,56 @@ nav .menu {
         display: block; /* aparecer só no mobile */
     }
 }
+
+/* =========================
+   RESET MOBILE DEFINITIVO
+========================= */
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+
+    nav {
+        padding: 14px 16px;
+    }
+
+    nav.container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* LOGO */
+    nav .logo {
+        flex: 0 0 auto;
+    }
+
+    nav .logo img {
+        height: 38px;
+        margin: 0;
+    }
+
+    /* MENU */
+    nav .menu {
+        display: flex;
+        gap: 12px;
+        margin: 0;
+    }
+
+    nav .menu a {
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    #sobre {
+        margin-top: 0;
+        padding-top: 80px;
+    }
+}
+
+
+
