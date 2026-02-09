@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Planos | Junek Systems</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Planos de criação de sites profissionais da Junek Systems. Escolha o plano ideal para o seu negócio.">
+    <meta name="keywords" content="planos de sites, criação de sites, desenvolvedor web, sites profissionais">
+    <meta name="author" content="Junek Systems">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS principal (caso queira reaproveitar fonte/cores) -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS dos planos -->
+    <link rel="stylesheet" href="planos.css">
+</head>
+<body>
+
+<!-- ===============================
+     PLANOS
+================================ -->
+
+<section class="planos-header container">
+    <h2 class="voltar-home" onclick="window.location.href='index.html'">
+        Nossos Planos
+    </h2>
+
+    <p class="subtitulo">
+        Soluções profissionais para colocar sua empresa na internet
+        com credibilidade, velocidade e conversão.
+    </p>
+</section>
+
+<section id="planos">
+
+    <!-- GRID DOS PLANOS -->
+    <div class="planos-grid">
+
+        <!-- PLANO BÁSICO -->
+        <div class="plano popular ">
+            <h3>Básico</h3>
+
+            <div class="preco">
+                <span class="preco">R$ 399</span>
+                <p class="pagamento">Pagamento único • Sem mensalidade</p>
+            </div>
+
+            <ul>
+                <li>Site institucional simples</li>
+                <li>Até 3 seções</li>
+                <li>Design responsivo</li>
+                <li>Botão WhatsApp ou formulario</li>
+                <li>Entrega rápida</li>
+            </ul>
+
+            <a href="https://wa.me/5541988502329" target="_blank">
+                Solicitar agora
+            </a>
+        </div>
+
+        <!-- PLANO PROFISSIONAL -->
+        <div class="plano basico">
+            <h3>Profissional</h3>
+
+            <div class="preco">
+                <span class="preco">R$ 699</span>
+                <p class="pagamento">Pagamento único • Sem mensalidade</p>
+
+            </div>
+
+            <ul>
+                <li>Site institucional completo</li>
+                <li>Até 5 seções</li>
+                <li>Design moderno e exclusivo</li>
+                <li>WhatsApp integrado ou formulário</li>
+                <li>SEO básico</li>
+                <li>7 dias de manutenção gratuita</li>
+            </ul>
+
+            <a href="https://wa.me/5541988502329" target="_blank">
+                Solicitar agora
+            </a>
+        </div>
+
+        <!-- PLANO PREMIUM -->
+        <div class="plano premium">
+            <h3>Premium</h3>
+
+            <div class="preco">
+                <span class="preco">R$ 1.199</span>
+                <p class="pagamento">Pagamento único • Sem mensalidade</p>
+            </div>
+
+            <ul>
+                <li>Site completo e personalizado</li>
+                <li>Páginas ilimitadas</li>
+                <li>Design premium</li>
+                <li>SEO otimizado</li>
+                <li>Alta performance</li>
+                <li>WhatsApp + Formulários</li>
+                <li>1 mês de manutenção gratuita</li>
+                <li>Suporte prioritário</li>
+            </ul>
+
+            <a href="https://wa.me/5541988502329" target="_blank">
+                Solicitar agora
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Junek Systems • Criação de Sites Profissionais</p>
+</footer>
+<script>
+const cards = document.querySelectorAll(".plano");
+
+cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        const rotateX = ((y - centerY) / centerY) * 10;
+        const rotateY = ((x - centerX) / centerX) * -10;
+
+        card.style.transform = `
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            translateY(-10px)
+        `;
+    });
+
+    card.addEventListener("mouseleave", () => {
+        card.style.transform = "rotateX(0) rotateY(0) translateY(0)";
+    });
+});
+</script>
+
+</body>
+</html>
+
+
