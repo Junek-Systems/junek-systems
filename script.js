@@ -76,3 +76,22 @@ setTimeout(() => {
     }
 }, 9000);
 
+/* MENU MOBILE */
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+if (toggle && menu) {
+    toggle.addEventListener('click', () => {
+        menu.classList.toggle('ativo');
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            menu.classList.remove('ativo');
+        });
+    });
+}
+
+
+
+
