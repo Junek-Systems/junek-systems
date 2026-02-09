@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Junek Systems | Criação de Sites Profissionais</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Criação de sites profissionais, modernos e integrados ao WhatsApp. Atendimento online para todo o Brasil.">
+    <meta name="keywords" content="criação de sites, sites profissionais, desenvolvedor web, site para empresas">
+    <meta name="author" content="Junek Systems">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="topo">
+    <nav class="container">
+        <a href="index.html" class="logo">
+            <img src="imgs/logoleo.png" alt="Junek Systems">
+        </a>
+
+        <div class="menu">
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="planos.html">Planos</a>
+        </div>
+    </nav>
+
+<div class="hero-novo">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-conteudo container">
+            <h2 class="hero-titulo">
+                <span class="linha animate delay-0 verde">O seu negócio já é bom.</span><br>
+                <span class="linha animate delay-2">Mas a internet sabe disso?</span>
+            </h2>
+
+                <p class="hero-subtitulo animate delay-4">
+                 Vem ver o que podemos criar juntos.
+                </p>
+
+            <div class="hero-botoes animate delay-4">
+                <button class="btn-primario" onclick="scrollPara('contato')">
+                    Solicitar Orçamento
+                </button>
+
+                <a href="portfolio.html" class="btn-secundario">
+                Ver Portfólio
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</header>
+
+<section id="sobre" class="sobre-apresentacao">
+    <div class="sobre-apresentacao-container animate">
+        <span class="sobre-tag">Sobre</span>
+
+        <h2>
+            A Junek Systems é um estúdio digital focado em performance,
+            presença online e crescimento real.
+        </h2>
+
+        <p>
+            Criamos sites profissionais pensados para posicionar marcas,
+            transmitir credibilidade e transformar visitantes em clientes.
+            Nada de sites genéricos. Cada projeto é estratégico,
+            responsivo e otimizado para resultados.
+        </p>
+    </div>
+</section>
+
+<section id="servicos" class="container">
+    
+    <h2>Serviços</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🌐 Sites Institucionais</h3>
+            <p>Sites modernos, responsivos e preparados para o Google.</p>
+        </div>
+
+        <div class="card">
+            <h3>📲 WhatsApp Integrado</h3>
+            <p>Botões de contato direto para aumentar conversões.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚙️ Manutenção</h3>
+            <p>Suporte, ajustes e melhorias contínuas.</p>
+        </div>
+    </div>
+</section>
+
+<section class="sobre-destaque">
+    <div class="sobre-container animate">
+        <p class="sobre-texto">
+            Presença digital não é estética.  
+            <span>É estratégia. É credibilidade. É conversão.</span>
+        </p>
+    </div>
+</section>
+
+<section id="contato" class="contato-section">
+    <div class="contato-card">
+        <h2>Solicite seu Site</h2>
+        <p>Atendimento online para todo o Brasil</p>
+
+        <div class="formulario">
+            <input type="text" id="nome" placeholder="Seu nome">
+            <textarea id="mensagem" placeholder="Descreva seu projeto"></textarea>
+            <button onclick="enviarWhatsApp()">Falar no WhatsApp</button>
+        </div>
+    </div>
+</section>
+
+<section class="container cta-final">
+    <h2>Vamos tirar seu projeto do papel?</h2>
+    <p>Fale diretamente com um especialista e receba uma proposta sob medida.</p>
+
+    <button class="btn-primario" onclick="scrollPara('contato')">
+        Falar com Especialista
+    </button>
+</section>
+
+<footer>
+    <p>© 2026 Junek Systems • Criação de Sites Profissionais</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
+
